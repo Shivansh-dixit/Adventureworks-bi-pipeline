@@ -1,0 +1,20 @@
+Dataset: AdventureWorks (Kaggle)
+Source: https://www.kaggle.com/datasets/khantrack/power-bi-adventure-works-project
+
+Tables used:
+- AdventureWorks_Sales_2015.csv  → fact_sales (appended)
+- AdventureWorks_Sales_2016.csv  → fact_sales (appended)
+- AdventureWorks_Sales_2017.csv  → fact_sales (appended)
+- AdventureWorks_Returns.csv     → fact_returns
+- AdventureWorks_Customers.csv   → dim_customer
+- AdventureWorks_Products.csv    → dim_product
+- AdventureWorks_Product_Categories.csv    → dim_category
+- AdventureWorks_Product_Subcategories.csv → dim_subcategory
+- AdventureWorks_Territories.csv → dim_territory
+- AdventureWorks_Calendar.csv    → dim_date
+
+Note: No SQL database used in this project.
+Data sourced directly from CSV files via Power Query.
+For enterprise version, data would be loaded into 
+Azure SQL Database and connected via DirectQuery or 
+scheduled import refresh.
