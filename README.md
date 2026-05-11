@@ -6,6 +6,9 @@ the AdventureWorks retail dataset. Demonstrates enterprise-level
 BI development skills including data modelling, DAX, RLS, and 
 deployment pipeline setup.
 
+## Live Report
+[View Live Report](https://app.powerbi.com/groups/me/reports/ddf04c11-c174-4ce3-9f39-c1c23dc3f1d0/19531b1ac55a60659edd?experience=power-bi)
+
 ## Business Problem
 AdventureWorks Cycles needed a centralized BI solution to track:
 - Sales performance across regions and products
