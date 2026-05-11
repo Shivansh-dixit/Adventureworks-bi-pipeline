@@ -1,0 +1,29 @@
+-- Total Revenue
+Total Revenue = SUMX(fact_sales, fact_sales[OrderQuantity] * RELATED(dim_product[ProductPrice]))
+
+-- Total Orders
+Total Orders = DISTINCTCOUNT(fact_sales[OrderNumber])
+
+-- Total Customers
+Total Customers = DISTINCTCOUNT(fact_sales[CustomerKey])
+
+-- Total Quantity
+Total Quantity = SUM(fact_sales[OrderQuantity])
+
+-- Average Revenue per Order
+Average Revenue per Order = DIVIDE([Total Revenue], [Total Orders])
+
+-- Total Returns
+Total Returns = COUNT(fact_returns[ReturnQuantity])
+
+-- Return Rate
+Return Rate = DIVIDE([Total Returns], [Total Orders])
+
+-- Revenue YTD
+Revenue YTD = TOTALYTD([Total Revenue], dim_date[Date])
+
+-- Revenue SPLY
+Revenue SPLY = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR(dim_date[Date]))
+
+-- YoY Growth %
+YoY Growth % = DIVIDE([Total Revenue] - [Revenue SPLY], [Revenue SPLY])
